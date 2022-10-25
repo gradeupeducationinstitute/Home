@@ -23,11 +23,13 @@
 <body>
 
 
+
+
   <!-- First Navbar -->
-  <nav
+  <!-- <nav
     class=" mt-0 fixed w-full z-10 top-0 w-full flex flex-wrap items-center justify-around  py-2 bg-gray-100 text-gray-500  hover:text-gray-700  focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid w-full lg:w-[80%] flex flex-wrap items-center justify-between px-6">
-      <button class="flex items-center   navbar-toggler text-gray-500 border-0 hover:shadow-none hover:no-underline
+      <button class="flex items-center  navbar-toggler text-gray-500 border-0 hover:shadow-none hover:no-underline
         py-2 px-2.5  bg-transparent  focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"
         type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,12 +43,12 @@
       </button>
       <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
         <a class="flex items-center  object-fill  mt-2  lg:mt-0  mr-1 " href="#">
-          <!-- <img class="object-contain  h-12 w-96 " src="images//gradeupimg-removebg-preview.png" alt="not found" loading="lazy" /> -->
+          
           <img class="object-contain  h-16 w-125 " src="images//gradeupimg-removebg-preview.png" alt="not found"
             loading="lazy" />
 
         </a>
-        <!-- Left links -->
+        
         <ul class="navbar-nav flex flex-col pl-0 list-style-none ml-auto">
           <li
             class="nav-item text-[#015474] py-3 cursor-pointer px-5 hover:text-white focus:underline hover:bg-[#015474] rounded-full">
@@ -77,11 +79,81 @@
             <a class="nav-link  font-bold " href="studyMaterial.html">Study Material</a>
           </li>
         </ul>
-        <!-- Left links -->
+        
       </div>
 
     </div>
+  </nav> -->
+
+
+
+
+
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-7">
+          <div>
+            <!-- Website Logo -->
+            <a href="#" class="flex items-center py-4 px-2">
+              <img src="images/gradeupimg-removebg-preview.png" alt="Logo" class="h-16 w-125 mr-2">
+              <!-- <span class="font-semibold text-gray-500 text-lg">Navigation</span> -->
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="index.html" class="text-[#015474] py-3 cursor-pointer px-5 hover:text-white font-bold hover:bg-[#015474] rounded-full">Home</a>
+            <a href="about.html" class="text-[#015474] py-3 cursor-pointer px-5 hover:text-white font-bold hover:bg-[#015474] rounded-full">About</a>
+            <a href="course.html" class="text-[#015474] py-3 cursor-pointer px-5 hover:text-white font-bold hover:bg-[#015474] rounded-full">Courses</a>
+            <a href="result.html" class="text-[#015474] py-3 cursor-pointer px-5 hover:text-white font-bold hover:bg-[#015474] rounded-full">Results</a>
+            <a href="blog.html" class="text-[#015474] py-3 cursor-pointer px-5 hover:text-white font-bold hover:bg-[#015474] rounded-full">Blog</a>
+            <a href="contact.html" class="text-[#015474] py-3 cursor-pointer px-5 hover:text-white font-bold hover:bg-[#015474] rounded-full">Contact Us</a>
+            <a href="studyMaterial.html" class="text-[#015474] py-3 cursor-pointer px-5 hover:text-white font-bold hover:bg-[#015474] rounded-full">Study Material</a>
+          </div>
+        </div>
+        
+        
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+          <svg class=" w-6 h-6 text-gray-500 hover:text-[#015474] "
+            x-show="!showMenu"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <ul class="">
+        <li><a href="index.html" class="text-[#015474] hover:text-white font-bold block text-sm px-2 py-4 hover:bg-[#015474]">Home</a></li>
+        <li><a href="about.html" class="text-[#015474] hover:text-white font-bold  block text-sm px-2 py-4 hover:bg-[#015474]">About</a></li>
+        <li><a href="course.html" class="text-[#015474] hover:text-white font-bold  block text-sm px-2 py-4 hover:bg-[#015474] ">Courses</a></li>
+        <li><a href="result.html" class="text-[#015474] hover:text-white font-bold  block text-sm px-2 py-4 hover:bg-[#015474] ">Results</a></li>
+        <li><a href="blog.html" class="text-[#015474] hover:text-white font-bold  block text-sm px-2 py-4 hover:bg-[#015474]">Blog</a></li>
+        <li><a href="contact.html" class="text-[#015474] hover:text-white font-bold  block text-sm px-2 py-4 hover:bg-[#015474] ">Contact Us</a></li>
+        
+        <li><a href="studyMaterial.html" class="text-[#015474] block text-sm font-bold  px-2 py-4 hover:bg-[#015474] ">Study Material</a></li>
+      </ul>
+    </div>
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
   </nav>
+
 
 
   <!-- First Colorful Testimonials -->
